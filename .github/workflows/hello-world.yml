@@ -1,0 +1,14 @@
+name: Hello World CI
+
+on: [push]
+
+jobs:
+  run-hello-world:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Clonar el repositorio
+      uses: actions/checkout@v3
+
+    - name: Ejecutar script Hello World
+      run: python hello.py
